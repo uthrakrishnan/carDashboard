@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    script(src='https://d3js.org/d3.v3.min.js')
+    
+    
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+   
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css')
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+
+
+    title
+  body
+    svg#fuelLevel(width='97%', height='250', onclick='fuelLevel.update(NewValue());')
+    svg#speedometer(width='97%', height='250')
+    svg#rpm(width="100" height="300" style="font-family: Helvetica; font-weight: bold;" onclick="stacker1.update((Math.random()*16382));")
+
+    script(src='/javascripts/fuelLevelGuage.js')
+    script(src='/javascripts/speedometer.js')
+    script(src='/javascripts/rpm.js')
+
+  
