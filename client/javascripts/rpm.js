@@ -8,7 +8,7 @@ function barStackerDefaultSettings(){
         cornerRoundingY: 20,
         barBoxPadding: 6,
         barPadding: 6,
-        color: "#222222", // The color of the outer circle.
+        color: d3.scale.chromatic(d3.interpolateReds), // The color of the outer circle.
         vertical: true,
         textLeftTop: true,
         textPx: 20,

@@ -4,15 +4,18 @@ block content
   div#dashboard.container
     div.content
       div.row
-        img#headlamp.col-md-1(src = '/images/headlamp.png')
-        img#doorstatus.col-md-1.col-md-offset-10(src = '/images/doorclosed.png')
-      div.row
-        div#gear.col-md-1
-          img#park(src='/images/p.png')
-          img#reverse(src='/images/r.png')
-          img#neutral(src='/images/n.png')
-          img#drive(src='/images/d.png')
-        svg#rpm.col-md-1(style="font-family: Helvetica; font-weight: bold;" )
+        div.col-md-3
+          div.row
+            img#headlamp.col-md-4(src = '/images/headlamp.png')
+          div.row
+            div#gear.col-md-4
+              img#park(src='/images/p.png')
+              img#reverse(src='/images/r.png')
+              img#neutral(src='/images/n.png')
+              img#drive(src='/images/d.png')
+            svg#rpm.col-md-4(style="font-family: Helvetica; font-weight: bold;" )
+        div.col-md-6
+          div.row
         div.col-md-1
         svg#speedometer.col-md-6
         svg#fuelLevel.col-md-3
@@ -21,6 +24,7 @@ block content
   div#map
     div#capture
   
+        img#doorstatus.col-md-1.col-md-offset-10(src = '/images/doorclosed.png')
 
   script(src="https://d3js.org/d3-scale-chromatic.v1.min.js")
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgN6DtP77GqN7ZtAcqJKTyiB6gFQfkEds&callback=initMap&path=color:blue|weight:5" async defer)
