@@ -5,10 +5,20 @@ const
 
 app.set('view engine', 'pug');
 app.use(express.static(__dirname + "/client"));
+
+
+
+
+
+
  
 app.get("/", function(req, res){
-  res.render('layout');
+  res.render('main');
 });
+
+app.get('/map', function(req, res){
+  res.render('map');
+})
 
 
 

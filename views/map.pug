@@ -1,0 +1,7 @@
+extends layout.pug
+
+block content 
+  div#map
+  div#capture
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgN6DtP77GqN7ZtAcqJKTyiB6gFQfkEds&callback=initMap&path=color:blue|weight:5" async defer)
+  script(src='/javascripts/map.js')

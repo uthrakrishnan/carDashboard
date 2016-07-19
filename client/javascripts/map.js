@@ -1,22 +1,18 @@
-function getLocations() {
+var map;
 
-    $.getJSON("http://localhost:1117/zones/latlng", function (json) {
-
-        var location;
-
-
-        $.each(json.zones, function (i, item) {
-            addMarker(item.Latitude,item.Longitude);
-        });
-
+function initMap(){
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 42.269344, lng: -83.246391},
+      zoom: 16
     });
 }
 
-function addMarker(lat,lng) {
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(lat,lng),
-            map: map,
-            icon: redImage
-        });
-        markersArray.push(marker);
-}
+
+var routeDriven = new google.maps.Polyline({
+    path
+})
+
+
+
+
+

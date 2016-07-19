@@ -2,7 +2,7 @@
 
 
 
-var fuelLevel = loadLiquidFillGauge("fuelLevel", 55);
+var fuelLevel = loadLiquidFillGauge("fuelLevel", 100);
 var config = liquidFillGaugeDefaultSettings();
 config.circleColor = "#FF7777";
 config.textColor = "#FF4444";
@@ -11,14 +11,7 @@ config.waveColor = "#FFDDDD";
 config.circleThickness = 0.2;
 config.textVertPosition = 0.2;
 config.waveAnimateTime = 1000;
-function NewValue(){
-  if(Math.random() > .5){
-    return Math.round(Math.random()*100);
-  } 
-  else {
-    return (Math.random()*100).toFixed(1);
-  }
-}
+
 
 
 
