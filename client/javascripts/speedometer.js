@@ -3,7 +3,7 @@ var gauges  = []
 
 document.addEventListener("DOMContentLoaded", function(event) {
 var opt = {
-  gaugeRadius : 250,
+  gaugeRadius : 500,
   minVal : 0,
   maxVal : 140,
   needleVal : Math.round(vehicleStatus.vehicleSpeed),

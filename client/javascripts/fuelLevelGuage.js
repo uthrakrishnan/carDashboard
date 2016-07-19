@@ -38,7 +38,8 @@ function liquidFillGaugeDefaultSettings(){
         valueCountUp: true, // If true, the displayed value counts up from 0 to it's final value upon loading. If false, the final value is displayed.
         displayPercent: true, // If true, a % symbol is displayed after the value.
         textColor: "#045681", // The color of the value text when the wave does not overlap it.
-        waveTextColor: "#A4DBf8" // The color of the value text when the wave overlaps it.
+        waveTextColor: "#A4DBf8", // The color of the value text when the wave overlaps it.
+        
     };
 }
 
@@ -138,7 +139,8 @@ function loadLiquidFillGauge(elementId, value, config) {
         .attr("font-size", textPixels + "px")
         .style("fill", config.textColor)
         .attr('transform','translate('+radius+','+textRiseScaleY(config.textVertPosition)+')');
-
+    
+    
     // The clipping wave area.
     var clipArea = d3.svg.area()
         .x(function(d) { return waveScaleX(d.x); } )
@@ -170,6 +172,8 @@ function loadLiquidFillGauge(elementId, value, config) {
         .style("fill", config.waveTextColor)
         .attr('transform','translate('+radius+','+textRiseScaleY(config.textVertPosition)+')');
 
+        
+    
     // Make the value count up.
     if(config.valueCountUp){
         var textTween = function(){
@@ -182,6 +186,7 @@ function loadLiquidFillGauge(elementId, value, config) {
         text2.transition()
             .duration(config.waveRiseTime)
             .tween("text", textTween);
+        
     }
 
     // Make the wave rise. wave and waveGroup are separate so that horizontal and vertical movement can be controlled independently.
@@ -233,6 +238,7 @@ function loadLiquidFillGauge(elementId, value, config) {
             text2.transition()
                 .duration(config.waveRiseTime)
                 .tween("text", textTween);
+            
 
             var fillPercent = Math.max(config.minValue, Math.min(config.maxValue, value))/config.maxValue;
             var waveHeight = fillCircleRadius*waveHeightScale(fillPercent*100);

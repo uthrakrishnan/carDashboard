@@ -20,6 +20,8 @@ var vehicleStatus = {
   gearPosition: 'park'
 };
 
+
+
 var sampleData 
 var dataPoints
 var currentPoint = 0;
@@ -63,12 +65,25 @@ d3.json('./sampleData.js', function(data){
     }
     if (data[currentPoint]['name'] === 'longitude'){
       vehicleStatus.route.longitude.push(data[currentPoint]['value'])
+      if (vehicleStatus.route.latitude[routeIdx] !== undefined){routeTaken.push({lat: vehicleStatus.route.latitude[routeIdx], lng: vehicleStatus.route.longitude[routeIdx]})}
+      routeDriven.setPath(routeTaken)
+      // map.center = routeTaken[routeTaken.length-1]
+      routeIdx++;
     }
     if (data[currentPoint]['name'] === 'ignition_status'){
       vehicleStatus.ignitionStatus = data[currentPoint]['value']
     }
     if (data[currentPoint]['name'] === 'transmission_gear_position'){
       vehicleStatus.gearPosition = data[currentPoint]['value']
+      if (vehicleStatus.gearPosition === 'park'){$('#park').attr('src', 'images/pyellow.png')}
+      else{$('#park').attr('src', 'images/p.png')}
+      if (vehicleStatus.gearPosition === 'neutral'){$('#neutral').attr('src', 'images/nyellow.png')}
+      else{$('#neutral').attr('src', 'images/n.png')}
+      if (vehicleStatus.gearPosition === 'reverse'){$('#reverse').attr('src', 'images/ryellow.png')}
+      else{$('#reverse').attr('src', 'images/r.png')}
+      if (vehicleStatus.gearPosition === 'first' || vehicleStatus.gearPosition === 'second' || vehicleStatus.gearPosition === 'third'|| vehicleStatus.gearPosition === 'fourth' || vehicleStatus.gearPosition === 'fifth' || vehicleStatus.gearPosition === 'sixth'){$('#drive').attr('src', 'images/dyellow.png')}
+      else{$('#drive').attr('src', 'images/d.png')}
+
     }
 
 
@@ -82,7 +97,7 @@ d3.json('./sampleData.js', function(data){
     }
   }
 
-  var vehicleData = setInterval(updateData.bind(this,sampleData), 1);
+  var vehicleData = setInterval(updateData.bind(this,sampleData), 2);
 });
 
 

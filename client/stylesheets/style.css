@@ -1,3 +1,10 @@
+/*dashboard*/
+#dashboard {
+  background-color: #000000;
+  width: 80%;
+  margin: 0 auto;
+}
+
 /*fuel gauge*/
 
 .liquidFillGaugeText { 
@@ -193,4 +200,10 @@ html, body {
 
 #map {
   height: 1400px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#gear img {
+  display: block;
 }

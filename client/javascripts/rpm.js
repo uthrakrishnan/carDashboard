@@ -1,9 +1,9 @@
-var stacker1 = loadBarStacker("rpm", "RPMs", 14000);
+var stacker1 = loadBarStacker("rpm", "RPMs", 1400);
 
 function barStackerDefaultSettings(){
     return {
         minValue: 0, // The gauge minimum value.
-        maxValue: 16500, // The gauge maximum value.
+        maxValue: 1650, // The gauge maximum value.
         cornerRoundingX: 20,
         cornerRoundingY: 20,
         barBoxPadding: 6,
@@ -80,7 +80,7 @@ function loadBarStacker(elementId, label, value, config) {
         .attr("font-size", config.textPx + "px")
         .attr("x", valueTextX)
         .attr("y", valueTextY)
-        .style("fill", "black")
+        .style("fill", "blue")
         .attr("transform","rotate("+textRotation+" "+valueTextX+" "+valueTextY+")");
 
     defs.append("clipPath")
