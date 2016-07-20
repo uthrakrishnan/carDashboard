@@ -10,7 +10,7 @@
 /*dashboard*/
 #dashboard {
   background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
-
+  z-index: 1;
   width: 80%;
   margin: 0 auto;
 }
@@ -293,7 +293,8 @@ html, body {
    }
 
 .hidden {
-  display: none;
+  /*display: none;*/
+  visibility: hidden;
 }
 
 #doorstatus {

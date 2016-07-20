@@ -19,11 +19,17 @@ var vehicleStatus = {
   engineSpeed: 0,
   gearPosition: 'park'
 };
+$(document).ready(function(){
 
-$('#mp').on('click', function(){
-  $('#map').removeClass('hidden')
-})
 
-$('#dash').on('click', function(){
-  $('#map').addClass('hidden')
+  $('#map').addClass("hidden")
+
+  $('#mp').on('click', function(){
+    $('#map').removeClass('hidden')
+  })
+
+  $('#dash').on('click', function(){
+    $('#map').addClass('hidden')
+  })
+  
 })
