@@ -7,7 +7,7 @@ var routeDriven
 function initMap(){
   map = new google.maps.Map(document.getElementById('map'), {
     center: routeTaken[routeIdx],
-    zoom: 20,
+    zoom: 17,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
 

@@ -40,10 +40,13 @@
  
 }
 
-h4 {
+#fuelLabel {
+  font-family: slimJoe;
   color: #EBBB2D;
-  font-size: 300px;
+  font-size: 40px;
   text-align: center;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 /*speedometer*/
@@ -295,5 +298,8 @@ html, body {
 
 #doorstatus {
   margin-top: 25px;
-  margin-left: 5px;
+}
+
+.grayed {
+  opacity: 0.2;
 }

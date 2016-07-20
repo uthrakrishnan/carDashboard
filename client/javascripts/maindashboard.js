@@ -49,6 +49,20 @@ d3.json('./sampleData.js', function(data){
     }
     if (data[currentPoint]['name'] === 'ignition_status'){
       vehicleStatus.ignitionStatus = data[currentPoint]['value']
+      if (vehicleStatus.ignitionStatus === 'off'){
+        $('#speedometer').addClass('grayed')
+        $('#rpm').addClass('grayed')
+        $('#fuelLevel').addClass('grayed')
+        $('#fuelLabel').addClass('grayed')
+        $('#odometer').addClass('grayed')
+      }
+      else {
+        $('#speedometer').removeClass('grayed')
+        $('#rpm').removeClass('grayed')
+        $('#fuelLevel').removeClass('grayed')
+        $('#fuelLabel').removeClass('grayed')
+        $('#odometer').removeClass('grayed') 
+      }
     }
     if (data[currentPoint]['name'] === 'transmission_gear_position'){
       vehicleStatus.gearPosition = data[currentPoint]['value']
