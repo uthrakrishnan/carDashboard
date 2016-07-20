@@ -4,12 +4,12 @@ var stacker1 = loadBarStacker("rpm", "RPMs", 1400);
 function barStackerDefaultSettings(){
     return {
         minValue: 0, // The gauge minimum value.
-        maxValue: 2000, // The gauge maximum value.
+        maxValue: 2500, // The gauge maximum value.
         cornerRoundingX: 20,
         cornerRoundingY: 20,
         barBoxPadding: 6,
         barPadding: 6,
-        color: d3.scale.linear().domain([0,1700]).range(['#EBBB2D', '#C21717']), // The color of the outer circle.
+        color: d3.scale.linear().domain([0,2000]).range(['#EBBB2D', '#C21717']), // The color of the outer circle.
         vertical: true,
         textLeftTop: true,
         textPx: 45,
