@@ -16,15 +16,21 @@ block content
             svg#rpm.col-md-6(style="font-family: Helvetica; font-weight: bold;" )
         div.col-md-6
           div.row
-        div.col-md-1
-        svg#speedometer.col-md-6
-        svg#fuelLevel.col-md-3
-      div.row
-        div#odometer.col-md-6.col-md-offset-3(class='odometer') 0000000
-  div#map
+            svg#speedometer.col-md-12
+          div.row
+            div#odometer.col-md-8.col-md-offset-2(class='odometer') 0000000
+        div.col-md-3
+          div.row
+            img#doorstatus.col-md-4.col-md-offset-8(src = '/images/doorclosed.png')
+          div.row
+            svg#fuelLevel.col-md-12
+          div.row
+            div.col-md-12
+              h4 Fuel Level
+  div#map.hidden
     div#capture
+  include menu.pug  
   
-        img#doorstatus.col-md-1.col-md-offset-10(src = '/images/doorclosed.png')
 
   
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgN6DtP77GqN7ZtAcqJKTyiB6gFQfkEds&callback=initMap&path=color:blue|weight:5" async defer)

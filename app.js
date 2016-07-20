@@ -16,11 +16,6 @@ app.get("/", function(req, res){
   res.render('main');
 });
 
-app.get('/map', function(req, res){
-  res.render('map');
-})
-
-
 
 
 app.listen(process.env.PORT || 3000, () => {
