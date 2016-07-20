@@ -1,27 +1,28 @@
+// var rpms = 0;
 var stacker1 = loadBarStacker("rpm", "RPMs", 1400);
 
 function barStackerDefaultSettings(){
     return {
         minValue: 0, // The gauge minimum value.
-        maxValue: 1650, // The gauge maximum value.
+        maxValue: 2000, // The gauge maximum value.
         cornerRoundingX: 20,
         cornerRoundingY: 20,
         barBoxPadding: 6,
         barPadding: 6,
-        color: d3.scale.chromatic(d3.interpolateReds), // The color of the outer circle.
+        color: d3.scale.linear().domain([0,1700]).range(['#EBBB2D', '#C21717']), // The color of the outer circle.
         vertical: true,
         textLeftTop: true,
-        textPx: 20,
+        textPx: 45,
         barThickness: 3,
         valuePrefix: "",
         valuePostfix: "",
         valueAnimateTime: 1000
+
     };
 }
 
 function loadBarStacker(elementId, label, value, config) {
     if(config == null) config = barStackerDefaultSettings();
-
     if(value > config.maxValue)
         value = config.maxValue;
 
@@ -29,8 +30,8 @@ function loadBarStacker(elementId, label, value, config) {
         value = config.minValue;
 
     var stacker = d3.select("#" + elementId);
-    var stackerWidth = parseInt(stacker.style("width"));
-    var stackerHeight = parseInt(stacker.style("height"));
+    var stackerWidth = 140;
+    var stackerHeight = 600;
 
     var barBoxX = config.vertical ? (config.textLeftTop ? config.barBoxPadding + config.textPx : config.barBoxPadding) : config.barBoxPadding;
     var barBoxY = config.vertical ? config.barBoxPadding : (config.textLeftTop ? config.barBoxPadding + config.textPx : config.barBoxPadding);
@@ -65,6 +66,34 @@ function loadBarStacker(elementId, label, value, config) {
         .attr("height", barBoxHeight)
         .attr("width", barBoxWidth)
         .style("fill", "black");
+
+    defs.append("clipPath")
+        .attr("id", "barClipPath_" + elementId)
+        .append("rect")
+        .attr("x", barClipPathBoxX)
+        .attr("y", barClipPathBoxY)
+        .attr("rx", config.cornerRoundingX)
+        .attr("ry", config.cornerRoundingY)
+        .attr("height", barClipPathBoxHeight)
+        .attr("width", barClipPathBoxWidth);
+
+  
+    stacker.append("rect")
+        .attr("height", stackerHeight)
+        .attr("width", stackerWidth)
+        .attr("rx", config.cornerRoundingX)
+        .attr("ry", config.cornerRoundingY)
+        .style("fill", '#11344F')
+        .attr("mask", "url(#barboxMask_" + elementId + ")");
+
+    
+    var barGroup = stacker.append("g")
+        .attr("clip-path", "url(#barClipPath_" + elementId + ")")
+        .attr("T", 0);
+
+    var barCount = config.vertical ? barClipPathBoxHeight / (config.barThickness * 2) : barClipPathBoxWidth  / (config.barThickness * 2);
+    var bars = [];
+
     mask.append("text")
         .text(label)
         .attr("text-anchor", "start")
@@ -80,43 +109,20 @@ function loadBarStacker(elementId, label, value, config) {
         .attr("font-size", config.textPx + "px")
         .attr("x", valueTextX)
         .attr("y", valueTextY)
-        .style("fill", "blue")
+        .style("fill", "black")
         .attr("transform","rotate("+textRotation+" "+valueTextX+" "+valueTextY+")");
 
-    defs.append("clipPath")
-        .attr("id", "barClipPath_" + elementId)
-        .append("rect")
-        .attr("x", barClipPathBoxX)
-        .attr("y", barClipPathBoxY)
-        .attr("rx", config.cornerRoundingX)
-        .attr("ry", config.cornerRoundingY)
-        .attr("height", barClipPathBoxHeight)
-        .attr("width", barClipPathBoxWidth);
-
-    stacker.append("rect")
-        .attr("height", stackerHeight)
-        .attr("width", stackerWidth)
-        .attr("rx", config.cornerRoundingX)
-        .attr("ry", config.cornerRoundingY)
-        .style("fill", config.color)
-        .attr("mask", "url(#barboxMask_" + elementId + ")");
-
-    var barGroup = stacker.append("g")
-        .attr("clip-path", "url(#barClipPath_" + elementId + ")")
-        .attr("T", 0);
-
-    var barCount = config.vertical ? barClipPathBoxHeight / (config.barThickness * 2) : barClipPathBoxWidth  / (config.barThickness * 2);
-    var bars = [];
 
     //Draw all the bars.
     for(var i = 0; i < barCount; i++){
         if(config.vertical){
             bars[i] = barGroup.append("rect")
+                .attr('class', 'stacks')
                 .attr("x", barClipPathBoxX)
                 .attr("y", (barClipPathBoxY + barClipPathBoxHeight - config.barThickness) - (i * config.barThickness * 2))
                 .attr("height", config.barThickness)
                 .attr("width", barClipPathBoxWidth)
-                .style("fill", config.color)
+                .style("fill", config.color(1400))
                 .style("visibility", "hidden");
         } else {
             bars[i] = barGroup.append("rect")
@@ -124,7 +130,7 @@ function loadBarStacker(elementId, label, value, config) {
                 .attr("y", barClipPathBoxY)
                 .attr("height", barClipPathBoxHeight)
                 .attr("width", config.barThickness)
-                .style("fill", config.color)
+                .style("fill", config.color(1400))
                 .style("visibility", "hidden");
         }
     }
@@ -209,6 +215,7 @@ function loadBarStacker(elementId, label, value, config) {
                 value = config.maxValue;
             if(value < config.minValue)
                 value = config.minValue;
+            // rpms = value;
 
             var barTweener = new BarTweener(value, _bars);
             barGroup.transition()
@@ -219,6 +226,7 @@ function loadBarStacker(elementId, label, value, config) {
             valueText.transition()
                 .duration(config.valueAnimateTime)
                 .tween("text", valueTextAnimator(value));
+            d3.selectAll('.stacks').style('fill', config.color(value))
         }
     }
 

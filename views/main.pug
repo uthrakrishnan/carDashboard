@@ -8,12 +8,12 @@ block content
           div.row
             img#headlamp.col-md-4(src = '/images/headlamp.png')
           div.row
-            div#gear.col-md-4
+            div#gear.col-md-6
               img#park(src='/images/p.png')
               img#reverse(src='/images/r.png')
               img#neutral(src='/images/n.png')
               img#drive(src='/images/d.png')
-            svg#rpm.col-md-4(style="font-family: Helvetica; font-weight: bold;" )
+            svg#rpm.col-md-6(style="font-family: Helvetica; font-weight: bold;" )
         div.col-md-6
           div.row
         div.col-md-1
@@ -26,10 +26,11 @@ block content
   
         img#doorstatus.col-md-1.col-md-offset-10(src = '/images/doorclosed.png')
 
-  script(src="https://d3js.org/d3-scale-chromatic.v1.min.js")
+  
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgN6DtP77GqN7ZtAcqJKTyiB6gFQfkEds&callback=initMap&path=color:blue|weight:5" async defer)
   script(src='/javascripts/map.js')
   script(src='/sampleData.js')
+  script(src='/javascripts/script.js')
   script(src='/javascripts/odometer.js')
   script(src='/javascripts/fuelLevelGuage.js')
   script(src='/javascripts/speedometer.js')

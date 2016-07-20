@@ -3,7 +3,7 @@ var gauges  = []
 
 document.addEventListener("DOMContentLoaded", function(event) {
 var opt = {
-  gaugeRadius : 500,
+  gaugeRadius : 550,
   minVal : 0,
   maxVal : 140,
   needleVal : Math.round(vehicleStatus.vehicleSpeed),
@@ -49,14 +49,14 @@ function drawGauge(opt) {
     if(typeof opt.zeroNeedleAngle === 'undefined')  {opt.zeroNeedleAngle=40}
     if(typeof opt.maxNeedleAngle === 'undefined')   {opt.maxNeedleAngle=320}
 
-    if(typeof opt.tickColMaj === 'undefined')       {opt.tickColMaj = '#0099CC'}
+    if(typeof opt.tickColMaj === 'undefined')       {opt.tickColMaj = '#11344F'}
     if(typeof opt.tickColMin === 'undefined')       {opt.tickColMin = '#000'}
-    if(typeof opt.outerEdgeCol === 'undefined')     {opt.outerEdgeCol = '#0099CC'}
+    if(typeof opt.outerEdgeCol === 'undefined')     {opt.outerEdgeCol = '#11344F'}
     if(typeof opt.pivotCol === 'undefined')         {opt.pivotCol = '#999'}
     if(typeof opt.innerCol === 'undefined')         {opt.innerCol = '#fff'}
     if(typeof opt.unitsLabelCol === 'undefined')    {opt.unitsLabelCol = '#000'}
     if(typeof opt.tickLabelCol === 'undefined')     {opt.tickLabelCol = '#000'}
-    if(typeof opt.needleCol === 'undefined')        {opt.needleCol = '#0099CC'}
+    if(typeof opt.needleCol === 'undefined')        {opt.needleCol = '#C21717'}
 
     defaultFonts = '"Helvetica Neue", Helvetica, Arial, sans-serif'
     if(typeof opt.tickFont === 'undefined')        {opt.tickFont = defaultFonts}
