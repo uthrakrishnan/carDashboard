@@ -13,8 +13,12 @@ app.use(express.static(__dirname + "/client"));
 
  
 app.get("/", function(req, res){
-  res.render('main');
+  res.render('home');
 });
+
+app.get('/dash', function(req, res){
+  res.render('main')
+})
 
 
 
