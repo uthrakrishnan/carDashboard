@@ -15,9 +15,9 @@ function initMap(){
     map: map,
     path: routeTaken,
     geodesic: true,
-    strokeColor: '#ff0000',
+    strokeColor: '#C21717',
     strokeOpacity: 1.0,
-    strokeWeight: 12
+    strokeWeight: 14
   });
 
   // routeDriven.setPath(routeTaken);
