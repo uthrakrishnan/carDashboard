@@ -12,7 +12,7 @@ function barStackerDefaultSettings(){
         color: d3.scale.linear().domain([0,2700]).range(['#EBBB2D', '#C21717']), // The color of the outer circle.
         vertical: true,
         textLeftTop: true,
-        textPx: 45,
+        textPx: 25,
         barThickness: 3,
         valuePrefix: "",
         valuePostfix: "",
@@ -30,8 +30,8 @@ function loadBarStacker(elementId, label, value, config) {
         value = config.minValue;
 
     var stacker = d3.select("#" + elementId);
-    var stackerWidth = 140;
-    var stackerHeight = 600;
+    var stackerWidth = 100;
+    var stackerHeight = 400;
 
     var barBoxX = config.vertical ? (config.textLeftTop ? config.barBoxPadding + config.textPx : config.barBoxPadding) : config.barBoxPadding;
     var barBoxY = config.vertical ? config.barBoxPadding : (config.textLeftTop ? config.barBoxPadding + config.textPx : config.barBoxPadding);

@@ -11,22 +11,22 @@
 #dashboard {
   background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
   z-index: 1;
-  width: 80vw;
+  width: 100vw;
   margin: 0 auto;
 }
 
 #home {
   background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
-  width: 80vw;
-  height: 90vh;
+  width: 100vw;
+  height: 85vh;
   margin: 0 auto;
 }
 
 #menu {
-  width: 80vw;
+  width: 100vw;
   margin: 0px auto;
   background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
-  height: 10vh;
+  height: 15vh;
 }
 
 .btnCntr {
@@ -37,9 +37,9 @@
 
 #fuelLevel {
   margin-top: 150px;
-  width: 300px;
-  height: 450px;
-  margin-right: 5px;
+  width: 40vw;
+  height: 40vh;
+  align-self: center;
 }
 
 .liquidFillGaugeText { 
@@ -57,6 +57,10 @@
 }
 
 /*speedometer*/
+#SVGbox-speedometer {
+ 
+}
+
 .label{
   font-size:22.5px;
   fill:#ffffff;
@@ -232,7 +236,7 @@
   transition-timing-function: linear;
 }
 .odometer {
-    font-size: 80px;
+    font-size: 50px;
 }
 /*map*/
 html, body {
@@ -245,32 +249,34 @@ html, body {
 #map {
   position:absolute;
   top:0;
-  left:10vw;
-  height: 90vh;
-  width: 80vw;
-  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+
 }
 
 #gear {
-  margin-top: 150px;
+  margin-top: 75px;
 }
 
 #gear img {
   display: block;
   margin-top: 25px;
   margin-left: 25px;
+  width: 60px;
 }
 
 #rpm {
-  height: 600px;
+  height: 400px;
   margin-top: 100px;
+  width: 60%;
+
 }
 
 /*menu buttons*/
 
 
 .button {
-   margin-top: 100px;
+   margin-top: 75px;
    background: #EBBB2D;
  /*  background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#b4c7d4));
    background: -webkit-linear-gradient(top, #65a9d7, #b4c7d4);
