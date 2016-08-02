@@ -11,19 +11,19 @@
 #dashboard {
   background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
   z-index: 1;
-  width: 80vh;
+  width: 80vw;
   margin: 0 auto;
 }
 
 #home {
   background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
-  width: 80vh;
+  width: 80vw;
   height: 90vh;
   margin: 0 auto;
 }
 
 #menu {
-  width: 80vh;
+  width: 80vw;
   margin: 0px auto;
   background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
   height: 10vh;
