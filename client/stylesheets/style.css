@@ -16,9 +16,10 @@
 }
 
 #home {
-  background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
+  background-image: url('http://ru.gde-fon.com/download/doroga_razmetka_pustynya_gorizont_nebo_oblaka/461509/1680x1050');
+  background-position: fixed;
   width: 100vw;
-  height: 85vh;
+  height: 100vh;
   margin: 0 auto;
 }
 
@@ -36,10 +37,9 @@
 /*fuel gauge*/
 
 #fuelLevel {
-  margin-top: 150px;
-  width: 40vw;
-  height: 40vh;
-  align-self: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 35vh;
 }
 
 .liquidFillGaugeText { 
@@ -52,13 +52,26 @@
   color: #EBBB2D;
   font-size: 40px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
 /*speedometer*/
-#SVGbox-speedometer {
- 
+
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
 }
 
 .label{

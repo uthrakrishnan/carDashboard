@@ -1,9 +1,12 @@
 var gauges  = []
+var speedgauge = d3.select("#speedometer")
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 600 400");
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
 var opt = {
-  gaugeRadius : 275,
+  gaugeRadius : Math.min(parseInt(speedgauge.style("width"))/2),
   minVal : 0,
   maxVal : 140,
   needleVal : Math.round(vehicleStatus.vehicleSpeed),
@@ -16,6 +19,8 @@ var opt = {
 gauges[0] = new drawGauge(opt);
 
 })
+
+
 
 
 function drawGauge(opt) {

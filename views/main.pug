@@ -14,17 +14,18 @@ block content
               img#neutral(src='/images/n.png')
               img#drive(src='/images/d.png')
         div.col-md-2
-            svg#rpm.col-md-7.col-md-offset-2.grayed(style="font-family: Helvetica; font-weight: bold;" )
+            svg#rpm.col-md-7.col-md-offset-2.grayed.svg-container.svg-content-responsive(style="font-family: Helvetica; font-weight: bold;" )
         div.col-md-6
           div.row
-            svg#speedometer.col-md-10.col-md-offset-1
+            svg#speedometer.col-md-10.col-md-offset-1.svg-container.svg-content-responsive
           div.row
-            div#odometer.col-md-8.col-md-offset-2.grayed(class='odometer')
+            div#odometer.col-md-8.col-md-offset-2.grayed.svg-container.svg-content-responsive(class='odometer')
         div.col-md-3
           div.row
             img#doorstatus.col-md-4.col-md-offset-8(src = '/images/doorclosed.png')
           div.row
-            svg#fuelLevel.col-md-6.grayed
+            svg#fuelLevel.col-md-10.grayed.svg-container.svg-content-responsive
+            div.col-md-2
           div.row
             div.col-md-12
               h4#fuelLabel Fuel Level
