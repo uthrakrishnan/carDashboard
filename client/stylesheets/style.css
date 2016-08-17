@@ -19,6 +19,8 @@
 #home {
   background-image: url('http://static1.squarespace.com/static/533e0523e4b0fb7f79ff16da/t/534775c5e4b01ccabb36f34c/1397192181288/sunrise+road.jpg?format=1500w');
   background-position: fixed;
+  background-repeat: none;
+  background-size: stretch;
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
