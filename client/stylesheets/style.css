@@ -9,14 +9,15 @@
 
 /*dashboard*/
 #dashboard {
-  background-image: url('http://www.walldevil.com/wallpapers/a77/background-backgrounds-freeman-wood-black.jpg');
+  background-image: url('http://st.gde-fon.com/wallpapers_original/461509_doroga_razmetka_pustynya_gorizont_nebo_oblaka_1680x1050_www.Gde-Fon.com.jpg');
   z-index: 1;
   width: 100vw;
+  height: 85vh;
   margin: 0 auto;
 }
 
 #home {
-  background-image: url('http://ru.gde-fon.com/download/doroga_razmetka_pustynya_gorizont_nebo_oblaka/461509/1680x1050');
+  background-image: url('http://static1.squarespace.com/static/533e0523e4b0fb7f79ff16da/t/534775c5e4b01ccabb36f34c/1397192181288/sunrise+road.jpg?format=1500w');
   background-position: fixed;
   width: 100vw;
   height: 100vh;
