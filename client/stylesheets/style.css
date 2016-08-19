@@ -298,7 +298,7 @@ html, body {
 #map {
   position:absolute;
   top:0;
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
 
 }
