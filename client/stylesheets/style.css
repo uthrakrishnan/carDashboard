@@ -1,10 +1,10 @@
 @font-face{
   font-family: bigJohn;
-  src: '/fonts/bigJohn.otf';
+  src: 'client/fonts/bigJohn.otf';
 }
 @font-face{
   font-family: slimJoe;
-  src: '/fonts/slimJoe.otf';
+  src: 'client/fonts/slimJoe.otf';
 }
 
 /*dashboard*/
