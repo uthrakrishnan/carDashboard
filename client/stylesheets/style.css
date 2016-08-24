@@ -1,6 +1,7 @@
 @font-face{
   font-family: bigJohn;
-  src: 'client/fonts/bigJohn.otf';
+  src: url('client/fonts/bigJohn.otf') format("opentype");
+  /*url("path-to-the-font-file/GraublauWeb.otf") format("opentype")*/
 }
 @font-face{
   font-family: slimJoe;
