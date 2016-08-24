@@ -21,7 +21,7 @@
   background-repeat: none;
   background-size: stretch;
   width: 100vw;
-  height: 85vh;
+  height: 100vh;
   margin: 0 auto;
   z-index: -2
 }
@@ -348,9 +348,6 @@ html, body {
    vertical-align: middle;
    }
 
-#td {
-  font-size: 40px;
-}
 .button:hover {
    text-shadow: #1e4158 0 1px 0;
    background: #EBBB2D;
