@@ -47,8 +47,8 @@ function loadLiquidFillGauge(elementId, value, config) {
     if(config == null) config = liquidFillGaugeDefaultSettings();
 
     var gauge = d3.select("#" + elementId);
-    var radius = Math.min(parseInt(gauge.style("width")), parseInt(gauge.style("height")))/2;
-    var locationX = parseInt(gauge.style("width"))/2 - radius;
+    var radius = Math.min(parseInt(gauge.style("width")), parseInt(gauge.style("height")))/2.1;
+    var locationX = parseInt(gauge.style("width"))/2.1 - radius;
     var locationY = parseInt(gauge.style("height"))/2 - radius;
     var fillPercent = Math.max(config.minValue, Math.min(config.maxValue, value))/config.maxValue;
 

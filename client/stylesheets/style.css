@@ -21,7 +21,7 @@
   background-repeat: none;
   background-size: stretch;
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   margin: 0 auto;
   z-index: -2
 }
@@ -59,6 +59,7 @@ p {
   font-size: .8em;
 }
 
+
 #menu {
   width: 100vw;
   margin: 0px auto;
@@ -66,16 +67,16 @@ p {
   height: 15vh;
 }
 
-.btnCntr {
+/*.btnCntr {
   margin: 50px auto;
-}
+}*/
 
 /*fuel gauge*/
 
 #fuelLevel {
-  margin-top: 50px;
-  width: 100%;
-  height: 35vh;
+  margin-top: 40px;
+  width: 300px;
+  height: 40vh;
 }
 
 .liquidFillGaugeText { 
@@ -130,6 +131,10 @@ p {
 .majorTicks{
   stroke:white;
   stroke-width:3;
+}
+
+#speedometer {
+  padding-bottom: 300px;
 }
 
 /*odometer*/
@@ -285,7 +290,8 @@ p {
   transition-timing-function: linear;
 }
 .odometer {
-    font-size: 50px;
+    font-size: 4em;
+    margin-top: -120px;
 }
 /*map*/
 html, body {
@@ -325,7 +331,7 @@ html, body {
 
 
 .button {
-   margin-top: 75px;
+   margin-top: 10px;
    background: #EBBB2D;
    padding: 25px 20px 20px 20px;
    -webkit-border-radius: 11px;
@@ -336,7 +342,7 @@ html, body {
    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
    text-shadow: #7ea4bd 0 1px 0;
    color: #11344f;
-   font-size: 64px;
+   font-size: 24px;
    font-family: bigJohn;
    text-decoration: none;
    vertical-align: middle;
