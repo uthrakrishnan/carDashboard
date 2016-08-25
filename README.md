@@ -14,7 +14,7 @@ Project Hosted At: https://visual-drive.herokuapp.com
  
  **Dashboard**
  ![Dashboard](https://github.com/uthrakrishnan/carDashboard/blob/master/client/images/dashboard.png)
- 
+ ![Dashboard2](https://github.com/uthrakrishnan/carDashboard/blob/master/client/images/dashboard2.png)
  **Map View**
  
 ![Map](https://github.com/uthrakrishnan/carDashboard/blob/master/client/images/mapView.png)
