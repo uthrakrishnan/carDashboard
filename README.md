@@ -2,6 +2,7 @@
 Project Hosted At: https://visual-drive.herokuapp.com
 
 **About**
+
  Visual Drive is an IOT project that takes data recorded from a 
  car's OBDII port while on an actual drive and visualizes the data using d3js graphs. 
  The app's visualization is a simulation of a drive on a main road of a large city. 
@@ -15,6 +16,6 @@ Project Hosted At: https://visual-drive.herokuapp.com
  **Dashboard**
  ![Dashboard](https://github.com/uthrakrishnan/carDashboard/blob/master/client/images/dashboard.png)
  ![Dashboard2](https://github.com/uthrakrishnan/carDashboard/blob/master/client/images/dashboard2.png)
- **Map View**
+ **Map View** 
  
 ![Map](https://github.com/uthrakrishnan/carDashboard/blob/master/client/images/mapView.png)
